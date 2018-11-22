@@ -1,7 +1,7 @@
 {
-    "name": "abuajaj-sqe-workshop-2018-exercise-1",
+    "name": "abuajaj-sqe-workshop-2018",
     "version": "1.0.0",
-    "description": "",
+    "description": "MAbuAjaj SQE workshops-2018",
     "main": "index.js",
     "scripts": {
         "start": "npm run start:dev",
