@@ -82,7 +82,9 @@ export default class Parser {
                 value = data.declarations[i].init.raw;
             else if ('ArrayExpression' === data.declarations[i].init.type)
                 value = 'Array(' + data.declarations[i].init.elements.length + ')';
-
+            else if ('VariableDeclarator' === data.declarations[i].type) {
+                value = this.expressionStatementRecursive(data.declarations[i].init);
+            }
             this.nodes.push(new Node(this.currentLine, 'VariableDeclaration', data.declarations[i].id.name, '', value));
         }
         this.currentLine++;
